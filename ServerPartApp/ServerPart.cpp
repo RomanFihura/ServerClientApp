@@ -91,8 +91,8 @@ int main() {
         send(client_socket, message.c_str(), message.size(), 0);
 
         int valread = recv(client_socket, buffer, 1024, 0);
-        if (valread <= 0) break; // Перевірка на помилки при отриманні даних
-        buffer[valread] = '\0'; // завершити рядок
+        if (valread <= 0) break; 
+        buffer[valread] = '\0';
         std::string option(buffer);
         try {
             int choice = std::stoi(option);
