@@ -13,7 +13,7 @@ public:
 
 private:
     SOCKET server_fd; //for serv socket
-    struct sockaddr_in address; //struct for info about serv address
+    struct sockaddr_in address; //struct for information about serv address
     int addrlen; //for bind and accept
     std::vector<std::thread> client_threads; 
     std::mutex client_threads_mutex;
